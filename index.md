@@ -1,4 +1,7 @@
-#demo
+# CS30
 
-##stuff
--like that
+## demos
+- add stuff later
+
+## Assignments
+- [interactive scene](interactive-scene)
