@@ -1,7 +1,7 @@
 # CS30
 
 ## demos
-- add stuff later
+- [traffic light demo](traffic-lights)
 
 ## Assignments
 - [interactive scene](interactive-scene)
