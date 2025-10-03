@@ -7,10 +7,15 @@
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  if (windowWidth > windowHeight) {
+    createCanvas(windowHeight, windowHeight);
+  } else {
+    createCanvas(windowWidth, windowWidth);
+  }
+  buttons();
 }
 
 function draw() {
-  background(220);
-  rect(mouseX, mouseY, 20, 40);
+  background(180);
+  screenState();
 }
