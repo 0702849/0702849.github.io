@@ -30,7 +30,6 @@ function screenState() {
     text("scuff labs", width / 2, width / 2 - width / 4);
   }
   if (gameState === "multishot") {
-    timerOn = true;
     multiShotEasy();
     }
   }

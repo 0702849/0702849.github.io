@@ -5,22 +5,19 @@ let time;
 let timerOn = false;
 
 //timer settings
-gameStarted = 0;
+let gameStarted = 0;
 Timer = 60;
 Score = 0;
 
 
-
-
-
-
 //game mode: multishot
 function multiShotEasy() {
-  scoreTimer();
-  target = createButton("");
-  target.mouseClicked(targetHit);
-  target.position(width / 2, width / 2);
-  target.size(100 / (width / 200), 100 / (width / 200));
+    timerOn = true;
+    scoreTimer();
+    target = createButton("");
+    target.mouseClicked(targetHit);
+    target.position(width / 2, width / 2);
+    target.size(100 / (width / 200), 100 / (width / 200));
 }
 
 //if a target is hit move to a random position within width by width
@@ -35,7 +32,7 @@ function scoreTimer() {
   if(timerOn === true){
     time = gameStarted + Timer - millis() / 1000;
     console.log(time);
-    if(millis() > gameStarted + 60000){
+    if(millis() > time){
         gameState = "start";
         console.log(gameState);
   }
