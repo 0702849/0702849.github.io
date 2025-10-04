@@ -1,11 +1,13 @@
+//epic score variables
 let Score = 0;
+let highScore = 0;
+
+//timer variables/settings
 let Timer = 60;
 let time = 0;
-//game version
 let timerOn = false;
-
-//timer settings
 let gameStarted = 0;
+//target button
 let target;
 
 
@@ -35,28 +37,40 @@ function targetHit() {
 
 //timer counts down while keeping score using nf
 function scoreTimer() {
-  let timeLeft;
-  if(timerOn === true){
+  let timeSince;
+  let timeLeft = Timer * 1000;
 
-    let timeSince = millis() - gameStarted;
+
+  //if game is running start the timer
+  if(timerOn === true){
+    timeSince = millis() - gameStarted;
     timeLeft = Timer * 1000 - timeSince;
     
     if(timeLeft < 0){
       timeLeft = 0;
     }
+    time = timeLeft / 1000;
+    // console.log(time);
   }
-  time = timeLeft / 1000;
-  console.log(time);
+
   
-  if(timeLeft === 0) {
+  if(timeLeft === 0 && timerOn) {
     timerOn = false;
+  
+  //change high score value
+  if(Score > highScore) {
+    let timeLeft = Timer * 1000 - timeSince;
+    highScore = Score;
+    // console.log(highScore);
+  }
+
     gameState = "start";
     target.hide();
   }
 
 
-  text(`Time Left: ${nf(time, 1, 1)} sec`, 5, 50, 90);
+  text(`Time Left: ${nf(time, 1, 1)} sec`, 5, 50, 100);
   text(`Score: ${nf(Score, 1, 0)}`, 10, 100, 90);
-
+  text(`High Score: ${highScore}`, 5, 110, 90);
 }
 
