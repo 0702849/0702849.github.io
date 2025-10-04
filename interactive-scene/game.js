@@ -68,9 +68,13 @@ function scoreTimer() {
     target.hide();
   }
 
+  textAlign(CENTER);
+  textSize(width/ 8)
+  text(`Time Left: ${nf(time, 1, 1)} sec`, width / 2, width /2);
 
-  text(`Time Left: ${nf(time, 1, 1)} sec`, 5, 50, 100);
-  text(`Score: ${nf(Score, 1, 0)}`, 10, 100, 90);
-  text(`High Score: ${highScore}`, 5, 110, 90);
+  textAlign(LEFT, TOP);
+  textSize(width / 30);
+  text(`Score: ${nf(Score, 1, 0)}`, width * 0.02, width * 0.02);
+  text(`High Score: ${highScore}`, width * 0.02, width * 0.08);
 }
 
