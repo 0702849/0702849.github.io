@@ -7,8 +7,8 @@ let Timer = 60;
 let time = 0;
 let timerOn = false;
 let gameStarted = 0;
-//target button
-let target;
+//NEW target amounts / settings
+let targetAmount = [];
 
 
 //game mode: multishot
@@ -16,14 +16,22 @@ function multiShotEasy() {
     timerOn = true;
     gameStarted = millis();
 
-    if (!target) {
-      target = createButton("hit me");
-      target.mouseClicked(targetHit);
-      target.size(100 / (width / 200), 100 / (width / 200));
-    }
-    target.show();
-    target.position(width / 2, width / 2);
+    // if (!target) {
+    //   target = createButton("");
+    //   target.mouseClicked(targetHit);
+    //   target.size(100 / (width / 200), 100 / (width / 200));
+    // }
+    // target.show();
+    // target.position(width / 2, width / 2);
+  
+    targetAppear(25);
 }
+
+
+
+//TARGET SETTINGS
+
+
 
 //if a target is hit move to a random position within width by width
 function targetHit() {
@@ -34,6 +42,30 @@ function targetHit() {
   Score += 25;
   console.log(Score);
 }
+
+
+//create this many(n) targets
+function targetAppear(n){
+  let i = 0;
+  while(i < n) {
+    let target = createButton("");
+    target.size(100 / (width / 200), 100 / (width/200));
+
+    target.mouseClicked(function(){targetHit(target);});
+    target.position(random(40, width - 40), random(40, width - 40));
+
+    targetAmount.push(target);
+    i += 1;
+  }
+}
+
+
+
+
+
+
+
+
 
 //timer counts down while keeping score using nf
 function scoreTimer() {
@@ -69,7 +101,7 @@ function scoreTimer() {
   }
 
   textAlign(CENTER);
-  textSize(width/ 8)
+  textSize(width/ 10)
   text(`Time Left: ${nf(time, 1, 1)} sec`, width / 2, width /2);
 
   textAlign(LEFT, TOP);
