@@ -40,11 +40,15 @@ function screenState() {
   }
   else if (gameState === "multishot") {
     scoreTimer();
+
+    textAlign(RIGHT, BOTTOM);
+    textSize(width / 40);
+    text("Press R to reset", width * 0.96, height * 0.96);
     }
   }
 
 function keyPressed(){
-  if (keycode === 82){
+  if (keyCode === 82){
     gameRestarted();
   }
 }
