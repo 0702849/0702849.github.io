@@ -76,7 +76,6 @@ function clearTargets() {
 }
 
 
-
 //TIMER SETTINGS
 
 
@@ -108,11 +107,12 @@ function scoreTimer() {
     highScore = Score;
     // console.log(highScore);
   }
-
     gameState = "start";
     clearTargets();
   }
 
+
+  //used ai to format into the center and top right while changing size
   textAlign(CENTER);
   textSize(width/ 10)
   text(`Time Left: ${nf(time, 1, 1)} sec`, width / 2, width /2);

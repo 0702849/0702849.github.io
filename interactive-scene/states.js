@@ -47,6 +47,8 @@ function screenState() {
     }
   }
 
+
+//when r key pressed reset game
 function keyPressed(){
   if (keyCode === 82){
     gameRestarted();
