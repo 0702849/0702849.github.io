@@ -34,11 +34,11 @@ function multiShotEasy() {
 
 
 //if a target is hit move to a random position within width by width
-function targetHit() {
+function targetHit(targets) {
   if (!timerOn){
     return;
   }
-  target.position(random(40, width-40), random(40, width-40));
+  targets.position(random(40, width-40), random(40, width-40));
   Score += 25;
   console.log(Score);
 }
@@ -48,23 +48,36 @@ function targetHit() {
 function targetAppear(n){
   let i = 0;
   while(i < n) {
-    let target = createButton("");
-    target.size(100 / (width / 200), 100 / (width/200));
+    let targets = createButton("");
+    targets.size(100 / (width / 200), 100 / (width/200));
 
-    target.mouseClicked(function(){targetHit(target);});
-    target.position(random(40, width - 40), random(40, width - 40));
+    targets.mouseClicked(function() { targetHit(targets); });
 
-    targetAmount.push(target);
+    targets.position(random(40, width - 40), random(40, width - 40));
+
+    targetAmount.push(targets);
     i += 1;
   }
 }
 
 
+//remove all of the targets
+function clearTargets() {
+
+  let i = 0;
+  while(i < targetAmount.length){
+    if(targetAmount[i]) {
+      targetAmount[i].hide();
+      targetAmount[i].remove();
+    }
+    i += 1;
+  }
+  targetAmount = [];
+}
 
 
 
-
-
+//TIMER SETTINGS
 
 
 //timer counts down while keeping score using nf
@@ -97,7 +110,7 @@ function scoreTimer() {
   }
 
     gameState = "start";
-    target.hide();
+    clearTargets();
   }
 
   textAlign(CENTER);

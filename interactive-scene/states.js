@@ -30,10 +30,27 @@ function stateUpdate() {
 function screenState() {
   if (gameState === "start") {
     startButton.show();
-    textAlign(CENTER, CENTER);
-    text("scuff labs", width / 2, width / 2 - width / 4);
+
+    textAlign(CENTER);
+    textSize(width / 12);
+    text("scuff labs", width / 2, width / 2 - width * 0.22);
+
+    textSize(width/ 24);
+    text("High Score: " + highScore, width /2, width * 0.12)
   }
   else if (gameState === "multishot") {
     scoreTimer();
     }
   }
+
+function keyPressed(){
+  if (keycode === 82){
+    gameRestarted();
+  }
+}
+function gameRestarted(){
+  Score = 0;
+  clearTargets();
+  gameState = "start";
+  timerOn = false;
+}
