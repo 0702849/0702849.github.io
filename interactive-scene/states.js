@@ -9,16 +9,20 @@ let startButton;
 function buttons() {
   startButton = createButton("start");
   startButton.position(width / 2, width / 2);
-  startButton.mouseClicked(stateUpdate);
+  startButton.mousePressed(stateUpdate);
 }
 
 //when a button is clicked do this
 function stateUpdate() {
-  if (startButton.mouseClicked) {
-    gameState = "multishot";
-    startButton.hide();
-    console.log(gameState);
-  }
+  // if (startButton.mouseClicked) {
+  //   gameState = "multishot";
+  //   startButton.hide();
+  //   console.log(gameState);
+  // }
+  gameState = "multishot";
+  startButton.hide();
+  console.log(gameState);
+  multiShotEasy();
 }
 
 
@@ -26,10 +30,10 @@ function stateUpdate() {
 function screenState() {
   if (gameState === "start") {
     startButton.show();
-    textAlign("center");
+    textAlign(CENTER, CENTER);
     text("scuff labs", width / 2, width / 2 - width / 4);
   }
-  if (gameState === "multishot") {
-    multiShotEasy();
+  else if (gameState === "multishot") {
+    scoreTimer();
     }
   }
