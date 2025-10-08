@@ -1,9 +1,9 @@
-// Project Title
-// Your Name
-// Date
+// multishot
+// Rylan Hamel Chan
+// october 3rd, 2025
 //
 // Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+// createButton function, nf used to create constantly changing numbers as strings
 
 
 function setup() {
