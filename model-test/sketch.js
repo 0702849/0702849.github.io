@@ -12,10 +12,13 @@ function draw() {
   background(175);
 
   rectMode(CENTER)
-  noStroke();
+  // noStroke();
   fill(0,0,255);
   rotateX(angle);
-  rect(0, 0, 150, 100);
+  rotateY(angle * 0.3);
+  rotateZ(angle * 1.2);
+  // rect(0, 0, 150, 100);
+  box(100, 100, 100);
 
-   angle += 0.07;
+  angle += 0.07;
 }
