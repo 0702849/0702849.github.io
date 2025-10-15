@@ -5,6 +5,7 @@
 - [tiles](tile)
 - [bouncing balls](bouncing-balls)
 - [perlin noise](perlin-noise)
+- [perlin bubbles](perlin-bubbles)
 
 ## Assignments
 -[interactive scene](interactive-scene)
