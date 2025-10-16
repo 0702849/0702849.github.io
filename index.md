@@ -13,4 +13,3 @@
 -[arrays and objects](arrays-objects)
 
 ## Game Versions / Tests
--[3d model testing](model-test)
