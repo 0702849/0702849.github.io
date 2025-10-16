@@ -6,6 +6,7 @@
 - [bouncing balls](bouncing-balls)
 - [perlin noise](perlin-noise)
 - [perlin bubbles](perlin-bubbles)
+- [terrain generation](terrain)
 
 ## Assignments
 -[interactive scene](interactive-scene)
