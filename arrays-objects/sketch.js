@@ -1,9 +1,10 @@
-// Project Title
-// Your Name
-// Date
+// Arrays and Objects
+// Rylan Hamel Chan
+//
+//  -- Scuff Labs 3d --
 //
 // Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+// i did it in 3d.
 
 var rover;
 
@@ -14,7 +15,7 @@ function setup() {
   rover.setState({           // optional
     position: [-400,-200,-200],
     rotation: [0.4,0.3,0],
-    sensitivity: 0.1,
+    sensitivity: 0.01,
     speed: 0.5
   });
 }
