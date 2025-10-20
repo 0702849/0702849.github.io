@@ -31,10 +31,11 @@ function setup() {
 }
 
 function draw() {
+
+  // -- map settings --
   background(0);
   fill(140);
   box(500);
 
-  // -- crosshair --
-  circle(width/2, height/2, 4);
+  // -- game stuff --
 }
