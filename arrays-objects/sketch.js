@@ -37,11 +37,11 @@ function draw() {
   // -- map settings --
   background(0);
   fill(140);
-  box(500, 500);
+  box(500, 500, 500, 0, 0);
 
 
 
   // -- game stuff --
   fill("red");
-  sphere(20);
+  sphere(2)
 }
