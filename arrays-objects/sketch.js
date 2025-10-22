@@ -14,6 +14,7 @@ function setup() {
   rover = createRoverCam();
 
   //  -- rovercam settings --
+  rover.usePointerLock();
   rover.setState({
     position: [0,0,0],
     rotation: [0.4,0.3,0],
@@ -23,12 +24,12 @@ function setup() {
   });
   
 
-  rover.keyMap.mx1 = [];
-  rover.keyMap.mx2 = [];
-  rover.keyMap.my1 = [];
-  rover.keyMap.my2 = [];
-  rover.keyMap.mz1 = [];
-  rover.keyMap.mz2 = [];
+  // rover.keyMap.mx1 = [];
+  // rover.keyMap.mx2 = [];
+  // rover.keyMap.my1 = [];
+  // rover.keyMap.my2 = [];
+  // rover.keyMap.mz1 = [];
+  // rover.keyMap.mz2 = [];
 }
 
 function draw() {
@@ -36,17 +37,11 @@ function draw() {
   // -- map settings --
   background(0);
   fill(140);
-  box(500);
+  box(500, 500);
 
 
 
   // -- game stuff --
-  keyPressed();
-
-}
-
-function keyPressed(){
-  if(keyCode === 67){
-    rover.usePointerLock();
-  }
+  fill("red");
+  sphere(20);
 }
