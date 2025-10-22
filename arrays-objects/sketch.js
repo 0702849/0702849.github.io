@@ -6,6 +6,7 @@
 // Extra for Experts:
 // i did it in 3d.
 
+let roverKeyMap = [];
 var rover;
 
 function setup() {
@@ -13,7 +14,6 @@ function setup() {
   rover = createRoverCam();
 
   //  -- rovercam settings --
-  rover.usePointerLock();
   rover.setState({
     position: [0,0,0],
     rotation: [0.4,0.3,0],
@@ -21,6 +21,7 @@ function setup() {
     fov: 2,
     speed: 0.5
   });
+  
 
   rover.keyMap.mx1 = [];
   rover.keyMap.mx2 = [];
@@ -37,5 +38,15 @@ function draw() {
   fill(140);
   box(500);
 
+
+
   // -- game stuff --
+  keyPressed();
+
+}
+
+function keyPressed(){
+  if(keyCode === 67){
+    rover.usePointerLock();
+  }
 }
