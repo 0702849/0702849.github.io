@@ -6,7 +6,7 @@
 // Extra for Experts:
 // i did it in 3d.
 
-let roverKeyMap = [];
+let sphereAttributes = [];
 var rover;
 
 function setup() {
@@ -43,5 +43,5 @@ function draw() {
 
   // -- game stuff --
   fill("red");
-  sphere(2)
+
 }

@@ -134,8 +134,8 @@ class RoverCam {
         RoverCam.pointerLock = true;
         instance.requestPointerLock();
       } else {
-        instance.exitPointerLock();
-        RoverCam.pointerLock = false;
+        // instance.exitPointerLock();
+        // RoverCam.pointerLock = false;
       }
     }, false);
     document.addEventListener('pointerlockchange', RoverCam.onPointerlockChange, false);
