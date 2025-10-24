@@ -17,7 +17,7 @@ function setup() {
   rover.usePointerLock();
   rover.setState({
     position: [0,0,0],
-    rotation: [0.4,0.3,0],
+    rotation: [0,0,0],
     sensitivity: 0.01,
     fov: 2,
     speed: 0.5
@@ -42,6 +42,15 @@ function draw() {
 
 
   // -- game stuff --
-  fill("red");
+  boomStick();
+}
+
+function boomStick(){
+  //stick color / size
+  strokeWeight(2);
+  fill("green");
+  translate(200,0,0);
+  box(3,4,5,1,1);
+
 
 }
