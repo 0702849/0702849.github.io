@@ -129,13 +129,13 @@ class RoverCam {
     RoverCam.canvas = instance._renderer.elt;
     // ffd8 - click into pointerlock example based on:
     // https://p5js.org/reference/#/p5/exitPointerLock
-    document.addEventListener('click', () => {
-      if (!RoverCam.pointerLock) {
+    document.addEventListener('keydown', () => {
+      if (!RoverCam.pointerLock && 'c') {
         RoverCam.pointerLock = true;
         instance.requestPointerLock();
-      } else {
-        // instance.exitPointerLock();
-        // RoverCam.pointerLock = false;
+       } else {
+        instance.exitPointerLock();
+        RoverCam.pointerLock = false;
       }
     }, false);
     document.addEventListener('pointerlockchange', RoverCam.onPointerlockChange, false);
