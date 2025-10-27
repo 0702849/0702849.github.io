@@ -4,7 +4,10 @@
 //  -- Scuff Labs 3d --
 //
 // Extra for Experts:
-// i did it in 3d.
+// - i did it in 3d
+// - use of constants
+// - potentially library editing and changing
+// - made a fun game (:
 
 let sphereAttributes = [];
 var rover;
@@ -42,15 +45,15 @@ function draw() {
 
 
   // -- game stuff --
-  boomStick();
+  // boomStick();   ---  Create gun model that follows camera
+
+  // -- HUD --
 }
 
-function boomStick(){
-  //stick color / size
-  strokeWeight(2);
-  fill("green");
-  translate(200,0,0);
-  box(3,4,5,1,1);
 
+function drawCrosshair() {
 
+  // use object to create crosshair settings
+
+  // dont forget to push and pop
 }
