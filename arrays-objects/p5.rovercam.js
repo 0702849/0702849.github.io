@@ -129,15 +129,21 @@ class RoverCam {
     RoverCam.canvas = instance._renderer.elt;
     // ffd8 - click into pointerlock example based on:
     // https://p5js.org/reference/#/p5/exitPointerLock
-    document.addEventListener('keydown', () => {
-      if (!RoverCam.pointerLock && 'c') {
-        RoverCam.pointerLock = true;
-        instance.requestPointerLock();
-       } else {
-        instance.exitPointerLock();
-        RoverCam.pointerLock = false;
-      }
-    }, false);
+document.addEventListener('keydown', (e) => {
+  // toggle only on the C key
+  if (e.key !== 'c' && e.key !== 'C') return;
+
+  const canvas = RoverCam.canvas || (instance && instance._renderer && instance._renderer.elt);
+  if (!canvas) return;
+
+  if (!RoverCam.pointerLock) {
+    // request lock on the canvas (must be from a user gesture like this keydown)
+    if (canvas.requestPointerLock) canvas.requestPointerLock();
+  } else {
+    // release lock
+    if (document.exitPointerLock) document.exitPointerLock();
+  }
+}, false);
     document.addEventListener('pointerlockchange', RoverCam.onPointerlockChange, false);
   }
   reset() {
@@ -210,9 +216,12 @@ RoverCam.version = "1.1.1";
 RoverCam.pointerLock = false;
 // handle exit from pointerLock when user presses ESCAPE
 RoverCam.onPointerlockChange = () => {
-  if (document.pointerLockElement !== RoverCam.canvas &&
-      document.mozPointerLockElement !== RoverCam.canvas) RoverCam.pointerLock = false;
-}
+  const el = RoverCam.canvas;
+  const locked =
+    document.pointerLockElement === el ||
+    document.mozPointerLockElement === el;
+  RoverCam.pointerLock = locked;   // <- set true when locked, false when unlocked
+};
 p5.prototype.createRoverCam = function(){
   return new RoverCam(this);
 }
