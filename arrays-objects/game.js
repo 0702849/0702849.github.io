@@ -3,7 +3,7 @@
 
 // -- constants --
 const TARGET_RADIUS = 18;
-const TARGET_DISTANCE = 200;
+const TARGET_DISTANCE = 100;
 
 // -- state variables --
 let targetPos = null;
@@ -34,7 +34,7 @@ function spawnTarget() {
   ).normalize();
    
     // final world position at fixed distance
-    targetPos = p5.Vector.add(eye, p5.Vector.multi(dir, TARGET_DISTANCE));
+    targetPos = p5.Vector.add(eye, p5.Vector.mult(dir, TARGET_DISTANCE));
 }
 
 function drawTarget() {
@@ -43,10 +43,10 @@ function drawTarget() {
     }
 
     push();
-    translate(targetPos.x, targetPos.Y, targetPos.z);
     noStroke();
     ambientMaterial(255, 120, 120);
-    sphereAttributes(TARGET_RADIUS, 18, 12);
+    translate(targetPos.x, targetPos.y, targetPos.z);
+    sphere(TARGET_RADIUS, 18, 12);
     pop();
 
 }

@@ -26,15 +26,20 @@ function setup() {
     speed: 0.5
   });
   
+  //stoping use of movement in the box map thing
+  rover.keyMap.mx1 = [];
+  rover.keyMap.mx2 = [];
+  rover.keyMap.my1 = [];
+  rover.keyMap.my2 = [];
+  rover.keyMap.mz1 = [];
+  rover.keyMap.mz2 = [];
 
-  // rover.keyMap.mx1 = [];
-  // rover.keyMap.mx2 = [];
-  // rover.keyMap.my1 = [];
-  // rover.keyMap.my2 = [];
-  // rover.keyMap.mz1 = [];
-  // rover.keyMap.mz2 = [];
+  if (typeof spawnTarget === 'function'){
+    spawnTarget();
+  }
 }
 
+let spawnedOnce = false;
 function draw() {
 
   // -- map settings --
@@ -44,8 +49,20 @@ function draw() {
 
 
 
+
   // -- game stuff --
   // boomStick();   ---  Create gun model that follows camera
+
+    // spawn exactly once after scripts are loaded
+  if (!spawnedOnce && typeof spawnTarget === 'function') {
+    spawnTarget();
+    _spawnedOnce = true;
+  }
+
+  if (typeof drawTarget === 'function'){
+    drawTarget();
+  }
+
 
   // -- HUD --
 
