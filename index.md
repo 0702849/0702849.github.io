@@ -7,6 +7,7 @@
 - [perlin noise](perlin-noise)
 - [perlin bubbles](perlin-bubbles)
 - [terrain generation](terrain)
+- [2d array grid](grid)
 
 ## Assignments
 -[interactive scene](interactive-scene)
