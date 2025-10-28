@@ -8,7 +8,7 @@
 - [perlin bubbles](perlin-bubbles)
 - [terrain generation](terrain)
 - [2d array grid](grid)
-
+- [rectangle array](rectangle-array)
 ## Assignments
 -[interactive scene](interactive-scene)
 -[arrays and objects](arrays-objects)
