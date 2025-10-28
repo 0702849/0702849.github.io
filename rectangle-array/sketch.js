@@ -59,7 +59,7 @@ function keyPressed() {
 
 function displayGrid() {
   for (let y = 0; y < rows; y++){
-    for(let x = 0; y < close; x++){
+    for(let x = 0; x < cols; x++){
       if (grid[y][x] === 0){
         fill("white");
       }
@@ -78,13 +78,20 @@ function generateEmptyGrid() {
       newGrid[y].push(0);
     }
   }
+  return newGrid;
 }
 
 function generateRandomGrid() {
   let newGrid = [];
   for(let y = 0; y < rows; y++){
+    newGrid.push([]);
     for(let x = 0; y < cols; x++){
+      //pick 0 or 1 randomly
+      if(random(100) < 50){
       newGrid[y].push(0);
+      }
+      else {
+        newGrid[y].push(1)
     }
   }
   return newGrid;
