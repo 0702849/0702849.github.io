@@ -96,3 +96,4 @@ function generateRandomGrid() {
   }
   return newGrid;
 }
+}
