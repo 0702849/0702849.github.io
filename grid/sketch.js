@@ -2,15 +2,15 @@
 // Rylan Hamel Chan
 // October 27, 2025
 
-// let theGrid = [[1, 0, 1, 0],
-//               [0, 0, 1, 1],
-//               [1, 1, 0, 0],  === HARD CODE ONLY === 
-//               [0, 1, 0, 1]];
-// const SQUARE_DIMENSION = theGrid.length;
+let theGrid = [[1, 0, 1, 0],
+              [0, 0, 1, 1],
+              [1, 1, 0, 0],  //=== HARD CODE ONLY === 
+              [0, 1, 0, 1]];
+const SQUARE_DIMENSION = theGrid.length;
 
-let theGrid;
-const SQUARE_DIMENSION = 4;  // == RANDOM GRID ==  
-let cellSize;
+// let theGrid;
+// const SQUARE_DIMENSION = 4;  // == RANDOM GRID ==  
+// let cellSize;
 
 
 function setup() {

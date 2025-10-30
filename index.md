@@ -11,7 +11,8 @@
 - [rectangle array](rectangle-array)
 - [game of life](game-of-life)
 ## Assignments
--[interactive scene](interactive-scene)
--[arrays and objects](arrays-objects)
+- [interactive scene](interactive-scene)
+- [arrays and objects](arrays-objects)
+- [grid based game](grid-based-game)
 
 ## Game Versions / Tests

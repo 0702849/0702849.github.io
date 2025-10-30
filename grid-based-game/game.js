@@ -1,4 +1,4 @@
-// tile fight :p
+// Tile Tower Defense
 // Rylan Hamel Chan
 // October 30, 2025
 //
@@ -13,4 +13,5 @@ function setup() {
 
 function draw() {
   background(220);
+  showLawn();
 }
