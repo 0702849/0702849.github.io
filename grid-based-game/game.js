@@ -8,14 +8,6 @@
 // --constants--
 
 // --global variables-
-let cellSize;
-let theLawn = [[0, 0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0, 0]];
-
-
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -23,4 +15,5 @@ function setup() {
 
 function draw() {
   background(220);
+  
 }

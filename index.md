@@ -10,6 +10,7 @@
 - [2d array grid](grid)
 - [rectangle array](rectangle-array)
 - [game of life](game-of-life)
+- [characters in a grid](character-grid)
 ## Assignments
 - [interactive scene](interactive-scene)
 - [arrays and objects](arrays-objects)
