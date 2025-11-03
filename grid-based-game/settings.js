@@ -1,19 +1,25 @@
 // --state variables--
 
 // --global variables--
-
+let lawn = [];
 // --constants--
 const ROWS = 9;
 const COLS = 5;
 
 // -- little helpers --
 
-function inBounds(rows, cols){}
+function inBounds(rows, cols){
+    //dont allow me to click outside of the lawn/tiles/play area
+}
 
 // == FUNCTIONS ==
 
 function drawLawn(){
-    //create lawn using loop
+    for(let y = 0; y <= 5; y++){
+        for(let x = 0; y <= 9; x++){
+            
+        }
+    }
 }
 
 function drawHUD(){
