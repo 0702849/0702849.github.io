@@ -22,6 +22,7 @@ function draw() {
 // == lawn stuff ==
 
 function drawLawn(){
+  //generate the lawns array/grid/board
     for(let y = 0; y <= COLS; y++){
         lawn.push([]);
         for(let x = 0; x <= ROWS; x++){
@@ -31,10 +32,13 @@ function drawLawn(){
 }
 
 function showLawn(){
+  //display the lawn with color
     for(let y = 0; y < LAWN_DIMENSIONS; y++){
         for(let x = 0; x < LAWN_DIMENSIONS; x++){
+          if(lawn[y][x] === 0){
             fill("green");
-            square(x, y, 50);
+          }
+          square(x * 50, y * 50, 50);
         }
     }
 }
