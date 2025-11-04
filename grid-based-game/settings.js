@@ -5,7 +5,7 @@ let lawn = [];
 // --constants--
 const ROWS = 9;
 const COLS = 5;
-
+const LAWN_DIMENSIONS = lawn.length;
 // -- little helpers --
 
 function inBounds(rows, cols){
@@ -14,18 +14,3 @@ function inBounds(rows, cols){
 
 // == FUNCTIONS ==
 
-function drawLawn(){
-    for(let y = 0; y <= 5; y++){
-        for(let x = 0; y <= 9; x++){
-            
-        }
-    }
-}
-
-function drawHUD(){
-    //hud goes above lawn and holds seed packets/towers
-}
-
-function hoveringLawn(){
-    //let me know if i can plant here by using a visual indicator like changing the color of the tiles or making a ghost tower
-}
