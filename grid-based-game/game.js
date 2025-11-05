@@ -30,6 +30,7 @@ function drawLawn(){
             lawn.push(0);     
         }
     }
+    console.log(lawn);
 }
 
 function showLawn(){
@@ -42,6 +43,8 @@ function showLawn(){
           square(x * 50, y * 50, 50);
         }
     }
+    //add different color tiles for clarity
+    //might not need this function keep in mind
 }
 
 function drawHUD(){
@@ -51,9 +54,9 @@ function drawHUD(){
   rect(0, 0, width, HUDHEIGHT);
 
   fill(255);
-  textAlign(TOP, CENTER);
+  textAlign(CENTER, TOP);
   textSize(22);
-  text("Tile Tower Defense", 16, HUDHEIGHT / 2);
+  text("Tile Tower Defense", width - (width/4), HUDHEIGHT / 2);
 }
 
 function hoveringLawn(){
