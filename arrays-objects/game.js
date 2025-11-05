@@ -60,8 +60,7 @@ function drawTarget() {
     push();
     noStroke();
 
-    specularMaterial(255, 120, 120); //epic shiny sphere B)
-    shininess(50);
+    emissiveMaterial(255, 0, 0, 50)
 
     translate(targetPos.x, targetPos.y, targetPos.z);
     sphere(TARGET_RADIUS, 18, 12);
