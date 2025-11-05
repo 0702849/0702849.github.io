@@ -16,6 +16,7 @@ function setup() {
 function draw() {
   background(220);
   showLawn();
+  drawHUD();
 }
 
 
@@ -44,7 +45,15 @@ function showLawn(){
 }
 
 function drawHUD(){
-    //hud goes above lawn and holds seed packets/towers
+  //hud goes above lawn and holds seed packets/towers and title
+  noStroke();
+  fill(150, 75, 0);
+  rect(0, 0, width, HUDHEIGHT);
+
+  fill(255);
+  textAlign(TOP, CENTER);
+  textSize(22);
+  text("Tile Tower Defense", 16, HUDHEIGHT / 2);
 }
 
 function hoveringLawn(){
