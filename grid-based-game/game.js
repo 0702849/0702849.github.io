@@ -3,7 +3,9 @@
 // October 30, 2025
 //
 // Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+// - use of classes and controllers  - https://cs30.wmcicompsci.ca/oop/overview.html
+// - 
+
 
 // --constants--
 
