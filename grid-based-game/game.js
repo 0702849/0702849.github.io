@@ -42,19 +42,6 @@ function drawLawn(){
   }
 }
 
-// function showLawn(){
-//   //display the lawn with color
-//     for(let y = 0; y < LAWN_DIMENSIONS; y++){
-//         for(let x = 0; x < LAWN_DIMENSIONS; x++){
-//           if(lawn[y][x] === 0){
-//             fill("green");
-//           }
-//           square(x * 50, y * 50, 50);
-//         }
-//     }
-//     //add different color tiles for clarity
-//     //might not need this function keep in mind
-// }
 
 function drawHUD(){
   //hud goes above lawn and holds seed packets/towers and title
@@ -70,6 +57,8 @@ function drawHUD(){
 
 function gridXY(x, y){
   //translate the mouse position on the screen into a specific spot in the grid
+  const col = Math.floor(x / CELLSIZE);
+  const row = Math.floor((y - HUDHEIGHT) / CELLSIZE);
 }
 
 function hoveringLawn(){
