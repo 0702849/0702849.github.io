@@ -17,8 +17,8 @@ function setup() {
 
 function draw() {
   background(220);
-  showLawn();
   drawHUD();
+  drawLawn();
 }
 
 
@@ -26,28 +26,35 @@ function draw() {
 
 function drawLawn(){
   //generate the lawns array/grid/board
-    for(let y = 0; y <= COLS; y++){
-        lawn.push([]);
-        for(let x = 0; x <= ROWS; x++){
-            lawn.push(0);     
-        }
+  for(let y = 0; y < COLS; y++){
+    for(let x = 0; x < ROWS; x++){
+      const _x = x * CELLSIZE;
+      const _y = HUDHEIGHT + y * CELLSIZE;
+
+      if((y + x) % 2 === 0){
+        fill(95, 160, 95);
+      }
+      else{
+        fill(105, 170, 105);
+      }
+      rect(_x, _y, CELLSIZE, CELLSIZE)
     }
-    console.log(lawn);
+  }
 }
 
-function showLawn(){
-  //display the lawn with color
-    for(let y = 0; y < LAWN_DIMENSIONS; y++){
-        for(let x = 0; x < LAWN_DIMENSIONS; x++){
-          if(lawn[y][x] === 0){
-            fill("green");
-          }
-          square(x * 50, y * 50, 50);
-        }
-    }
-    //add different color tiles for clarity
-    //might not need this function keep in mind
-}
+// function showLawn(){
+//   //display the lawn with color
+//     for(let y = 0; y < LAWN_DIMENSIONS; y++){
+//         for(let x = 0; x < LAWN_DIMENSIONS; x++){
+//           if(lawn[y][x] === 0){
+//             fill("green");
+//           }
+//           square(x * 50, y * 50, 50);
+//         }
+//     }
+//     //add different color tiles for clarity
+//     //might not need this function keep in mind
+// }
 
 function drawHUD(){
   //hud goes above lawn and holds seed packets/towers and title
@@ -58,9 +65,14 @@ function drawHUD(){
   fill(255);
   textAlign(CENTER, TOP);
   textSize(22);
-  text("Tile Tower Defense", width - (width/4), HUDHEIGHT / 2);
+  text("Tile Tower Defense", width - (width / 2), HUDHEIGHT / 2);
+}
+
+function gridXY(x, y){
+  //translate the mouse position on the screen into a specific spot in the grid
 }
 
 function hoveringLawn(){
     //let me know if i can plant here by using a visual indicator like changing the color of the tiles or making a ghost tower
+    
 }
