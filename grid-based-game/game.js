@@ -42,7 +42,6 @@ function drawLawn(){
   }
 }
 
-
 function drawHUD(){
   //hud goes above lawn and holds seed packets/towers and title
   noStroke();
@@ -55,13 +54,19 @@ function drawHUD(){
   text("Tile Tower Defense", width - (width / 2), HUDHEIGHT / 2);
 }
 
+function hoveringLawn(){
+  //let me know if i can plant here by using a visual indicator like changing the color of the tiles or making a ghost tower
+  
+}
+
+// -- little helpers --
+
+function inBounds(rows, cols){
+  //dont allow me to click outside of the lawn/tiles/play area
+}
+
 function gridXY(x, y){
   //translate the mouse position on the screen into a specific spot in the grid
   const col = Math.floor(x / CELLSIZE);
   const row = Math.floor((y - HUDHEIGHT) / CELLSIZE);
-}
-
-function hoveringLawn(){
-    //let me know if i can plant here by using a visual indicator like changing the color of the tiles or making a ghost tower
-    
 }
