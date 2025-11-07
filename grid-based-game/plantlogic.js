@@ -3,3 +3,10 @@
 // - peashooter/offense
 // - walnut/defense
 
+
+class Plant{
+    constructor(){
+        this.health = 150;
+        this.durability = 10;
+    }
+}
