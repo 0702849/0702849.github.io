@@ -54,6 +54,8 @@ class Zombie {
         }
     }
     move(){
-        
+
     }
 }
+
+//use object arrays to calculate health and such
