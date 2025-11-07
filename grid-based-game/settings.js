@@ -3,7 +3,7 @@
 // --global variables--
 let lawn = [];
 // --constants--
-const CELLSIZE = 120;
+const CELLSIZE = 160;
 const ROWS = 9;
 const COLS = 5;
 const HUDHEIGHT = 80;
