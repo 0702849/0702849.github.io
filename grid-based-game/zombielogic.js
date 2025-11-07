@@ -26,3 +26,34 @@
 const ZOMBIESPEED = 0; //change later
 // == FUNCTIONS ==
 
+class Zombie {
+    constructor(){
+        this.speed = 5;
+        this.size = 10;
+        this.color = "green";
+    }
+
+    display(){
+        fill(this.color);
+        stroke(this.color);
+    }
+
+    spawn(){
+        let num = random(120);
+        if(num <= 20){
+        }
+        else if(20 < num <= 40){
+        }
+        else if(40 < num <= 60){
+        }
+        else if(60 < num <= 80){
+        }
+        else if(80 < num <= 100){
+        }
+        else if(100 < num <= 120){
+        }
+    }
+    move(){
+        
+    }
+}

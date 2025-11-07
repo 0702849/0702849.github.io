@@ -4,6 +4,7 @@
 //
 // Extra for Experts:
 // - use of classes and controllers  - https://cs30.wmcicompsci.ca/oop/overview.html
+//      -https://p5js.org/reference/p5/class/
 // - 
 
 
