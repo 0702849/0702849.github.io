@@ -5,7 +5,9 @@
 // Extra for Experts:
 // - use of classes and controllers  - https://cs30.wmcicompsci.ca/oop/overview.html
 //      -https://p5js.org/reference/p5/class/
-// - 
+// - ternary operators - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+// - https://www.w3schools.com/c/c_conditions_short_hand.php
+// - (game.js line 113)
 
 
 // --constants--

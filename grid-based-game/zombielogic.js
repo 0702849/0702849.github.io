@@ -12,7 +12,7 @@
 // --zombie types--         normal for now
 const ZOMBIE_TYPES = {
     normal: {
-        hp: 5,
+        hp: 10,
         speed: 0.6,
         bodyW: 40,
         bodyH: CELLSIZE * 0.7,
@@ -28,7 +28,6 @@ let spawningEnabled = true;
 let zombies = [];
 
 // -- levels and wave plans --
-
                             //increase amount of zombies depending on level difficulty
                             // level one - one flag, 20 zombies
                             // ----------flag----------
@@ -38,6 +37,7 @@ let zombies = [];
 
                             //level three - two flags, 45 zombies
                             // ----------flag---------------flag---------------
+
 const LEVELS = {
     1:{
         total: 20, spawnEvery: 90
@@ -157,7 +157,7 @@ class Zombie {
 
         // thee bodey
         noStroke();
-        fill(...this.bodyColor);
+        fill(this.bodyColor);
         rect(0, 0, this.bodyW, this.bodyH, 6);
         circle(0, -35, this.head);
 
