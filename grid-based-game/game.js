@@ -14,13 +14,30 @@
 
 function setup() {
   createCanvas(WIDTH, HEIGHT);
+
+  startLevel(1);
 }
 
 function draw() {
   background(220);
+  //lawn stuff
   drawHUD();
   drawLawn();
   hoveringLawn();
+
+  //zombie stuff
+  spawnTick(); // spawn the zombies
+  updateZombies(); // move the zombies
+  drawZombies(); // draw the zombies
+
+  //the lose condition *dramatic nosies*
+  if(zombieEatsBrains()){
+    noLoop();
+    textSize(20);
+    fill("red");
+    textAlign(CENTER, CENTER);
+    text("THE ZOMBIES HAVE EATEN YOUR BRAINS or something", width/2, height/2);
+  }
 }
 
 
