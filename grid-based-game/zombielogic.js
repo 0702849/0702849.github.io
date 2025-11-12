@@ -16,6 +16,7 @@ const ZOMBIE_TYPES = {
         speed: 0.6,
         bodyW: 40,
         bodyH: CELLSIZE * 0.7,
+        head: CELLSIZE * 0.4,
         bodyColor: [170, 180, 170], //a nice visible greyish green chosen by yours truly
     },
     //cone
@@ -120,6 +121,7 @@ function firstInTheLane(row) {
     }
     return best;
 }
+
 // == CORE OBJECTS ==                                                   :p
 class Zombie {
     constructor(type = "normal", row = 0){
@@ -137,6 +139,7 @@ class Zombie {
         this.speed = spec.speed;
         this.bodyW = spec.bodyW;
         this.bodyH = spec.bodyH;
+        this.head = spec.head;
         this.bodyColor = spec.bodyColor;
 
         this.alive = true;
@@ -156,6 +159,7 @@ class Zombie {
         noStroke();
         fill(...this.bodyColor);
         rect(0, 0, this.bodyW, this.bodyH, 6);
+        circle(0, -35, this.head);
 
         pop();
     }

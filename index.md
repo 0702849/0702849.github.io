@@ -11,6 +11,7 @@
 - [rectangle array](rectangle-array)
 - [game of life](game-of-life)
 - [characters in a grid](character-grid)
+- [basic OOP syntax](basic-oop)
 ## Assignments
 - [interactive scene](interactive-scene)
 - [arrays and objects](arrays-objects)
