@@ -12,6 +12,7 @@
 - [game of life](game-of-life)
 - [characters in a grid](character-grid)
 - [basic OOP syntax](basic-oop)
+- [walker OOP](walker-oop)
 ## Assignments
 - [interactive scene](interactive-scene)
 - [arrays and objects](arrays-objects)
