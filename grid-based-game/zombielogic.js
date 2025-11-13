@@ -12,7 +12,7 @@
 // --zombie types--         normal for now
 const ZOMBIE_TYPES = {
     normal: {
-        hp: 10,
+        hp: 4,
         speed: 0.6,
         bodyW: 40,
         bodyH: CELLSIZE * 0.7,
@@ -157,21 +157,27 @@ class Zombie {
 
         // thee bodey
         noStroke();
-        fill(this.bodyColor);
+        fill(...this.bodyColor);
         rect(0, 0, this.bodyW, this.bodyH, 6);
         circle(0, -35, this.head);
 
         pop();
     }
 
-    update(){
-        if(!this.alive) {
-            return;
+    update() {
+        if (!this.alive) return;
+
+        // Look slightly ahead of the zombie's left edge for a plant
+        const plant = blockingPlant(this.row, this.x - this.bodyW * 0.5);
+        if (plant) {
+            // Bite every 0.75 seconds
+            if (frameCount % 45 === 0) damagePlant(plant, 1);
+            return; // stop moving while biting
         }
+
+        // Otherwise, keep going for dem brains
         this.x -= this.speed;
-        if(this.x < -this.bodyW - 50){
-            this.alive = false;
-        }
+        if (this.x < -this.bodyW - 50) this.alive = false;
     }
 
     hit(amount = 1){

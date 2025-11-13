@@ -60,6 +60,22 @@ function spawnPlant(row, col, type = currentSeed) {
     return true;
 }
 
+function blockingPlant(row, x){
+    //a plant that sits in front of x in this row and is used for zombies to take hella damage
+    const COL = Math.floor(x / CELLSIZE);
+    return plantsGrid[row] ? plantsGrid[row][COL] : null;
+}
+
+function damagePlant(plant, amount = 1){
+    if(!plant){
+        return;
+    }
+    plant.health -= amount;
+    if(plant.health <= 0){
+        plantsGrid[plant.row][plant.col] = null;
+    }
+}
+
 // == CORE OBJECTS ==
 
 //plant class
@@ -105,7 +121,7 @@ class Plant{
         rect(this.x - 6, this.y + 6, 6, 18, 4);
 
         // head
-        fill(this.bodyColor);
+        fill(...this.bodyColor);
         circle(this.x, this.y - 6, this.bodyW);
 
         // weird little snout nozzle thing
