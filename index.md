@@ -13,6 +13,7 @@
 - [characters in a grid](character-grid)
 - [basic OOP syntax](basic-oop)
 - [walker OOP](walker-oop)
+- [nodes OOP](nodes)
 ## Assignments
 - [interactive scene](interactive-scene)
 - [arrays and objects](arrays-objects)

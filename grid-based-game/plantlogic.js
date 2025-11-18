@@ -10,7 +10,7 @@ const PLANTTYPE = {
         health: 6,
         bodySizeH: 20,
         bodySizeW: 30,
-        bodyColor: [95, 160, 82], //https://colors.artyclick.com/color-names-dictionary/color-names/muted-green-color
+        bodyColor: [46, 236, 8], //https://colors.artyclick.com/color-names-dictionary/color-names/muted-green-color
         damage: 1,
         shotInterval: 60,
     },
