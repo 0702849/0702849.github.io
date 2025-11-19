@@ -14,6 +14,7 @@
 - [basic OOP syntax](basic-oop)
 - [walker OOP](walker-oop)
 - [nodes OOP](nodes)
+- [OOP shape](oop-shape)
 ## Assignments
 - [interactive scene](interactive-scene)
 - [arrays and objects](arrays-objects)
