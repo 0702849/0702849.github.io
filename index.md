@@ -15,6 +15,7 @@
 - [walker OOP](walker-oop)
 - [nodes OOP](nodes)
 - [OOP shape](oop-shape)
+- [collision demo](collision-demo)
 ## Assignments
 - [interactive scene](interactive-scene)
 - [arrays and objects](arrays-objects)
