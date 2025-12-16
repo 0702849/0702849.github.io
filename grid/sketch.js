@@ -22,7 +22,7 @@ function setup() {
   cellSize = height/SQUARE_DIMENSION;
   }
 
-  theGrid = generateRandomGrid(SQUARE_DIMENSION, SQUARE_DIMENSION); // == RANDOM GRID ==
+  // theGrid = generateRandomGrid(SQUARE_DIMENSION, SQUARE_DIMENSION); // == RANDOM GRID ==
 }
 
 function draw() {
